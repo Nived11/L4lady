@@ -1,54 +1,47 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: black;
-    color: white;
-    font-family: 'Arial', sans-serif;
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
 .home {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #e30613;
+  padding: 20px;
 }
 
-.coming-container {
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
+.logo {
+  width: 300px;
+  max-width: 80%;
+  margin-bottom: 20px;
 }
 
-.brand {
-    font-size: 4rem;
-    color: #e91e63;
-    letter-spacing: 2px;
+.tagline {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.soon {
-    font-size: 2rem;
-    margin: 20px 0;
-    color: #ffffffb0;
+.coming-soon {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e30613;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
 .follow {
-    margin-top: 30px;
-    font-size: 1rem;
-    color: #888;
-}
-
-.insta-link {
-    color: #e91e63;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-    display: inline-block;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #555;
 }

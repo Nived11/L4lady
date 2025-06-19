@@ -1,17 +1,20 @@
 import React from "react";
-import './Home.css';
+import Nav from "./Nav";
+import "./Home.css";
+import logo from "../assets/l4lady-LOGO.png";
 
-function Home(){
-    return(
-        <div className="home">
-            <div className="coming-container">
-                <h1 className="brand">L4Lady</h1>
-                <h2 className="soon">Coming Soon</h2>
-                <p className="follow">Follow us on Instagram</p>
-                <a href="https://www.instagram.com/l4.lady?igsh=YjRqMjR5c3U3cGoz" target="_blank" className="insta-link">Instagram</a>
-            </div>
-        </div>
-    )
+function Home() {
+  return (
+    <>
+    <Nav/>
+    <div className="home">
+      <img src={logo} alt="L4Lady Logo" className="logo" />
+      <h2 className="tagline">A New Era of Fashion Begins</h2>
+      <h1 className="coming-soon">COMING SOON</h1>
+    
+    </div>
+    </>
+  );
 }
 
 export default Home;
