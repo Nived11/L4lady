@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Nav.css'; 
-import logo from '../assets/l4lady-LOGO.png'; 
+import logo from '../assets/l4logo.png'; 
 import { 
   FaEnvelope, 
   FaInstagram, 

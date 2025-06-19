@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
 import "./Home.css";
-import logo from "../assets/l4lady-LOGO.png";
+import logo from "../assets/l4logo.png";
 
 function Home() {
   return (
