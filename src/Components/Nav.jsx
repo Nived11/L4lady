@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Nav.css'; 
 import logo from '../assets/l4logo.png'; 
+import twitter from '../assets/twitter.png';
+import twittered from '../assets/twittered.png';
 import { 
   FaEnvelope, 
   FaInstagram, 
@@ -15,7 +17,6 @@ function Nav() {
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
-        // Toggle body scroll lock
         document.body.classList.toggle('sidebar-open');
     };
 
@@ -33,14 +34,16 @@ function Nav() {
                         Elegance is the only beauty that never fades
                     </div>
                     <div className="social-links">
-                        <a href="mailto:contact@l4lady.com" title="Email">
+                        <a href="mailto:info@l4lady.com" title="Email">
                             <FaEnvelope />
                         </a>
-                        <a href="#" title="Instagram">
+                        <a href="https://www.instagram.com/l4.lady?igsh=YjRqMjR5c3U3cGoz" title="Instagram">
                             <FaInstagram />
                         </a>
                         <a href="#" title="Twitter/X">
-                            <FaTwitter />
+                             <img src={twitter} 
+       alt="X logo" 
+       style={{ height: "14px", width: "14px" }} />
                         </a>
                         <a href="#" title="Facebook">
                             <FaFacebookF />
@@ -69,11 +72,14 @@ function Nav() {
                     </div>
 
                     <div className="nav-center">
-                        <img 
-                            src={logo}
-                            className="logo-img" 
-                            alt="L4LADY Logo" 
-                        />
+                        <div className="logo-container">
+                            <img 
+                                src={logo}
+                                className="logo-img" 
+                                alt="L4LADY Logo" 
+                            />
+                            <div className="tagline">Forever for women</div>
+                        </div>
                     </div>
 
                     <div className="nav-right">
@@ -88,11 +94,14 @@ function Nav() {
 
             <div className={`mobile-sidebar ${isMobileMenuOpen ? 'active' : ''}`}>
                 <div className="sidebar-header">
-                    <img 
+                    <div className="sidebar-logo-container">
+                        <img 
                             src={logo}
                             className="logo-img" 
                             alt="L4LADY Logo" 
                         />
+                        <div className="tagline">Forever for women</div>
+                    </div>
                     <button 
                         className="close-btn" 
                         onClick={closeMobileMenu}
@@ -112,14 +121,15 @@ function Nav() {
                 </ul>
 
                 <div className="sidebar-social">
-                    <a href="mailto:contact@l4lady.com" title="Email">
+                    <a href="mailto:info@l4lady.com" title="Email">
                         <FaEnvelope />
                     </a>
-                    <a href="#" title="Instagram">
+                    <a href="https://www.instagram.com/l4.lady?igsh=YjRqMjR5c3U3cGoz" title="Instagram">
                         <FaInstagram />
                     </a>
-                    <a href="#" title="Twitter/X">
-                        <FaTwitter />
+                    <a href="#" title="Twitter/X" className="twitter-icon-wrap">
+                        <img className="twitter-icon-default" src={twittered} alt="X logo white" />
+                        <img className="twitter-icon-hover" src={twitter} alt="X logo black" />
                     </a>
                     <a href="#" title="Facebook">
                         <FaFacebookF />
@@ -127,7 +137,6 @@ function Nav() {
                 </div>
             </div>
 
-            {/* Overlay */}
             <div 
                 className={`overlay ${isMobileMenuOpen ? 'active' : ''}`} 
                 onClick={closeMobileMenu}

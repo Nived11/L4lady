@@ -1,47 +1,312 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  font-family: 'Poppins', sans-serif;
+.home {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.home {
-  height: 100vh;
+.overlayy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.623);
+  z-index: 1;
+}
+
+.carousel-contentt {
+  position: relative;
+  z-index: 2;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
   text-align: center;
-  color: #e30613;
-  padding: 20px;
+  padding: 2rem;
 }
 
-.logo {
-  width: 300px;
-  max-width: 80%;
-  margin-bottom: 20px;
+.logoo {
+  width: 200px;
+  margin-bottom: 1.5rem;
+  filter: none;
 }
 
-.tagline {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
+.titlee {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  position: relative;
+  color: #ffffff;
+   font-family: 'Outfit', sans-serif;
 }
 
-.coming-soon {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #e30613;
-  animation: blink 1.5s infinite;
+.titlee::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #dc2626, transparent);
+  transition: width 0.8s ease;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+.titlee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.066) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 5s ease;
 }
 
-.follow {
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #555;
+.description {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin-bottom: 2.5rem;
+  color: #ffffffc7;
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Enhanced Progress Bar */
+.progress-container {
+  width: 80%;
+  max-width: 400px;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+  border-radius: 50px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: progressShimmer 2s infinite;
+}
+
+.progress-text {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Professional Animations */
+@keyframes elegantFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sophisticatedSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+    letter-spacing: 15px;
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    letter-spacing: 8px;
+  }
+}
+
+@keyframes underlineExpand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 120px;
+  }
+}
+
+@keyframes titleShine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes progressFill {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    width: 85%;
+    opacity: 1;
+  }
+}
+
+@keyframes progressShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(220, 38, 38, 0.1);
+  }
+}
+
+/* Animation Classes */
+.animate-logoo {
+  animation: elegantFadeIn 1s ease-out 0.2s forwards, 
+             logoFloat 4s ease-in-out 2s infinite;
+  opacity: 0;
+}
+
+.animate-title {
+  animation: titleReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards,
+             subtleGlow 10s ease-in-out 6s infinite;
+  opacity: 0;
+}
+
+.animate-title::before {
+  animation: underlineExpand 0.8s ease-out 1.8s forwards;
+}
+
+.animate-title::after {
+  animation: titleShine 1.5s ease-in-out 2.5s infinite;
+}
+
+.animate-description {
+  animation: sophisticatedSlide 1s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+.animate-progress {
+  animation: elegantFadeIn 1s ease-out 1.2s forwards;
+  opacity: 0;
+}
+
+.animate-progress .progress-fill {
+  animation: progressFill 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s forwards;
+}
+
+.animate-progress .progress-text {
+  animation: elegantFadeIn 0.8s ease-out 2.5s forwards;
+  opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .titlee {
+    font-size: 2.8rem;
+    letter-spacing: 6px;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  
+  .progress-container {
+    width: 90%;
+  }
+  
+  .logoo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titlee {
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .logoo {
+    width: 120px;
+  }
 }
