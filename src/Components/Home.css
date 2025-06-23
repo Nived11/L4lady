@@ -1,3 +1,8 @@
+html {
+  scrollbar-width: thin;
+  /* scrollbar-color: #848484 #000000; */
+}
+
 .home {
   height: 90vh;
   background-size: cover;
@@ -30,10 +35,27 @@
   padding: 2rem;
 }
 
+.home-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+
 .logoo {
   width: 200px;
-  margin-bottom: 1.5rem;
   filter: none;
+}
+
+.home-taglinee {
+ font-family: 'Outfit', sans-serif;
+  font-size:19px;
+  font-weight: 600;
+ color: #e13737;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
 }
 
 .titlee {
@@ -235,9 +257,21 @@
   }
 }
 
+/* Updated synchronized animation for logo container */
+@keyframes logoContainerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Animation Classes */
 .animate-logoo {
-  animation: elegantFadeIn 1s ease-out 0.2s forwards, 
+  animation: logoContainerFadeIn 1s ease-out 0.2s forwards, 
              logoFloat 4s ease-in-out 2s infinite;
   opacity: 0;
 }
@@ -275,6 +309,12 @@
   opacity: 0;
 }
 
+/* Updated tagline animation to match logo timing */
+.animate-taglinee {
+  animation: logoContainerFadeIn 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .titlee {
@@ -294,6 +334,11 @@
   .logoo {
     width: 150px;
   }
+
+  .home-taglinee {
+    /* margin-top: -8px; */
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -308,5 +353,9 @@
   
   .logoo {
     width: 120px;
+  }
+
+  .home-taglinee {
+    font-size: 11px;
   }
 }

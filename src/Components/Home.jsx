@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "./Nav";
 import "./Home.css";
 import Footer from "./Footer";
-import logo from "../assets/l4logo.png";
+import logo from "../assets/l4logotm.png";
 import cl1097 from "../assets/collections/1097x1920.jpg";
 
 function Home() {
@@ -15,7 +15,10 @@ function Home() {
       >
         <div className="overlayy" />
         <div className="carousel-contentt">
-          <img src={logo} alt="L4LADY" className="logoo animate-logoo" />
+          <div className="home-logo-container animate-logoo">
+            <img src={logo} alt="L4LADY" className="logoo" />
+            <div className="home-taglinee animate-taglinee">Forever for women</div>
+          </div>
           
           <p className="description animate-description">
            A New Era of Fashion Begins

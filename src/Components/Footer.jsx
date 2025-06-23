@@ -55,6 +55,7 @@ function Footer() {
                             <div className="contact-item">
                                 <FaMapMarkerAlt className="contact-icon" />
                                 <div className="contact-text">
+                                    <div>L4 LADY CREATIONS</div>
                                     <div>Parayil Building, Pattithanam Junction</div>
                                     <div>Ettumanoor, Kottayam</div>
                                     <div>Kerala - 686632</div>
