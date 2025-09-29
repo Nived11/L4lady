@@ -24,6 +24,7 @@ function Home() {
            A New Era of Fashion Begins
           </p>
           <h1 className="titlee animate-title">Coming Soon</h1>
+          
 
           <div className="progress-container animate-progress">
             <div className="progress-bar">
