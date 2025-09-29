@@ -57,12 +57,19 @@ function Footer() {
               </div>
               <div className="contact-item">
                 <FaMapMarkerAlt className="contact-icon" />
-                <div className="contact-text">
-                  <div>L4 LADY CREATIONS</div>
-                  <div>Parayil Building, Pattithanam Junction</div>
-                  <div>Ettumanoor, Kottayam</div>
-                  <div>Kerala - 686632</div>
-                </div>
+                <a
+                  href="https://www.google.com/maps?q=L4 Lady Creations, Parayil Building, Pattithanam - Manarcadu Byp Rd, Junction, Ettumanoor, Kerala 686632"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-link"
+                >
+                  <div className="contact-text">
+                    <div>L4 LADY CREATIONS</div>
+                    <div>Parayil Building, Pattithanam Junction</div>
+                    <div>Ettumanoor, Kottayam</div>
+                    <div>Kerala - 686632</div>
+                  </div>
+                </a>
               </div>
             </div>
 
